@@ -38,23 +38,7 @@ http://localhost:8080
 
 `Authorization: JWT 토큰(Bearer)`   
 
-## 공통 응답
-### 회원 가입 
-```json
-    {
-        "id": 1,
-        "account": "devbadak",
-        "password" "~~~~~~~": 
-        "name": "개발바닥",
-        "email": "~~@~~~.com";
-    }
-```  
-   
-* 아이디 account 
-* 패스워드 password
-* 이름 name
-* 이메일 email -> unique  
-     
+## 공통 응답     
 ### 에러 응답
 
 서버에서 `code`, `message`값을 응답한다.
@@ -80,6 +64,24 @@ http://localhost:8080
     }
 }
 ```
+## 회원 가입
+ `/signin`
+ 
+```json
+    {
+        "id": 1,
+        "account": "devbadak",
+        "password" "~~~~~~~": 
+        "name": "개발바닥",
+        "email": "~~@~~~.com";
+    }
+```  
+   
+* 아이디 account 
+* 패스워드 password
+* 이름 name
+* 이메일 email -> unique  
+
 
 ## 인증
 
