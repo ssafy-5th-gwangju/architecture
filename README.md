@@ -74,14 +74,14 @@ http://localhost:8080
  
 ```json
     {
-        "id": 1,
         "account": "devbadak",
         "password": "~~~~~~~", 
         "name": "개발바닥",
         "email": "~~@~~~.com"
     }
 ```  
-   
+
+* 시퀀스 id
 * 아이디 account 
 * 패스워드 password
 * 이름 name
