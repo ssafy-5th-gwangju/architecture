@@ -3,33 +3,24 @@
 
 * 로그인페이지 -> 회원가입 페이지
 * 회원가입 -> 취소 -> 로그인 페이지
-* 회원가입 -> 생성 -> 로그인이되고 -> 메인으로 
-* 메인에서 -> 로그아웃 -> 확인 -> 로그인
-* 메인에서 -> 로그아웃 -> 취소 
-* 로그인 안 되었는데 메인 -> 로그인    
-
-`테스트 API { name : }`
-
-### 회원가입
-
-### 로그인
-
-### 로그아웃 
-
+* 회원가입 -> 생성 -> 로그인이되고(session storage jwt token) -> 메인으로 
+* 메인에서 -> 로그아웃 -> 확인 -> 로그인 (token 삭제)   
+* 메인에서 -> 로그아웃 -> 취소    
+* 로그인 안 되었는데 메인 -> 로그인        
+       
 #### 선택 
-비밀번호 찾기 -> 메시지 서비스
-TODOLIST -> CRUD API 
+* 패턴매칭 -> 최소 몇자 이상, 특수문자 제거   
+* 비밀번호 찾기 -> 메시지 서비스
+* TODOLIST -> CRUD API 
   * 작성한 사람만 수정
   * 작성 안한 사람은 수정 불가능
   * 각 페이지 
 
 # API
 ## 주소
-
-http://localhost:5000
-
+http://localhost:8080   
+    
 ## 공통 요청
-
 ### 로그인 정보
 
 * 아이디: devbadak
@@ -45,10 +36,25 @@ http://localhost:5000
 
 헤더 인증방식을 사용한다.
 
-`Authorization: Bearer 토큰`
+`Authorization: JWT 토큰(Bearer)`   
 
 ## 공통 응답
-
+### 회원 가입 
+```json
+    {
+        "id": 1,
+        "account": "devbadak",
+        "password" "~~~~~~~": 
+        "name": "개발바닥",
+        "email": "~~@~~~.com";
+    }
+```  
+   
+* 아이디 account 
+* 패스워드 password
+* 이름 name
+* 이메일 email -> unique  
+     
 ### 에러 응답
 
 서버에서 `code`, `message`값을 응답한다.
@@ -66,6 +72,8 @@ http://localhost:5000
 {
     "code": 400,
     "message": "잘못된 요청입니다.",
+    
+    // 선택  
     "validate": {
         "account": ["1~4글자만 입력할 수 있습니다.", "..."],
         "password": ["비밀번호를 입력해주세요"]
@@ -101,22 +109,3 @@ URI: `/auth/logout`
 Method: `GET`  
 
 - Response: `status 204`
-
-
-## 회원정보
-
-### 회원정보 조회
-
-URI: `/v1/users/me`  
-Method: `GET`
-
-- Response
-
-    ```json
-    {
-        "id": 1,
-        "account": "devbadak",
-        "name": "개발바닥",
-        "level": 10
-    }
-    ```
