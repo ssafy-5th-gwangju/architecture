@@ -21,7 +21,7 @@
 http://localhost:8080   
 
 ## 메인
-`/main`
+`/main` GET 방식  
 
 ## 공통 요청
 ### 로그인 정보
