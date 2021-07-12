@@ -76,9 +76,9 @@ http://localhost:8080
     {
         "id": 1,
         "account": "devbadak",
-        "password" "~~~~~~~": 
+        "password": "~~~~~~~", 
         "name": "개발바닥",
-        "email": "~~@~~~.com";
+        "email": "~~@~~~.com"
     }
 ```  
    
