@@ -73,7 +73,7 @@ http://localhost:8080
 }
 ```
 ## 회원 가입
- `/signin`
+ `/auth/signup`
  
 ```json
     {
