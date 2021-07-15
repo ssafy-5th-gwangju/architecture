@@ -104,7 +104,9 @@ Method: `POST`
     ```
 
 - Response
-
+    ```http
+    Authorization: <type> <credentials> 
+    ```
     ```json
     {
         "accessToken": "xxx"
