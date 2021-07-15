@@ -113,6 +113,8 @@ Method: `POST`
     ```json
     {
         "accessToken": "xxx"
+        "refreshToken": "xxx"
+
     }
     ```
 
