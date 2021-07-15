@@ -1,4 +1,7 @@
-# architecture   
+# architecture      
+   
+[JWT](https://github.com/springframework-sprout/spring-expert/blob/main/spring/etc/JWT.md#%ED%86%A0%ED%81%B0-%EC%9D%B8%EC%A6%9D-%ED%83%80%EC%9E%85)    
+   
 ## 요구 사항 명세서           
 
 * 로그인페이지 -> 회원가입 페이지
