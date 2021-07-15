@@ -105,13 +105,13 @@ Method: `POST`
         "password": "비밀번호"
     }
     ```
-
-- Response
-    **http header**
+  
+- Response    
+    **http header**   
     ```http
     Authorization: <type> <credentials> 
     ```
-    **http body**
+    **http body**   
     ```json
     {
         "accessToken": "xxx"
